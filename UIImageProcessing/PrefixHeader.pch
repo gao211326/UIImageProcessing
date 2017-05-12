@@ -1,0 +1,30 @@
+//
+//  PrefixHeader.pch
+//  UIImageProcessing
+//
+//  Created by 高磊 on 2017/5/4.
+//  Copyright © 2017年 高磊. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#define UICOLOR_FROM_RGB(r,g,b)             [UIColor colorWithRed:(r/255.0) green:(g/255.0) blue:(b/255.0) alpha:1.0]
+
+#define UICOLOR_FROM_RGB_ALPHA(r,g,b,al)             [UIColor colorWithRed:(r/255.0) green:(g/255.0) blue:(b/255.0) alpha:al]
+
+#define UICOLOR_FROM_RGB_OxFF(rgbValue)     [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
+green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
+blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+#define UICOLOR_FROM_RGB_OxFF_ALPHA(rgbValue,al)     [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
+green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
+blue:((float)(rgbValue & 0xFF))/255.0 alpha:al]
+
+
+#import "SynthesizeSingleton.h"
+#define MAS_SHORTHAND
+#define MAS_SHORTHAND_GLOBALS
+#import "Masonry.h"
+
+#endif /* PrefixHeader_pch */
